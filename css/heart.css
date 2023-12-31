@@ -1,0 +1,189 @@
+/* Start: Defining variables */
+:root {
+  --all-animations-duration: 1.5s;
+  --bgColor: red;
+  --color: black;
+  --defaultAnimationState: running;
+}
+
+/* End: Defining variables */
+
+body {
+  animation: ChangeBGcolor var(--all-animations-duration) infinite
+    alternate-reverse;
+  overflow: hidden;
+  animation-play-state: var(--defaultAnimationState);
+}
+
+.main-quote {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  animation: h1Change var(--all-animations-duration) infinite alternate-reverse;
+  animation-play-state: var(--defaultAnimationState);
+  margin-top: 150px;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin: 40px auto;
+  animation: pulse var(--all-animations-duration) infinite alternate-reverse;
+  animation-play-state: var(--defaultAnimationState);
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #ff0000;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  animation: HeartColor var(--all-animations-duration) infinite
+    alternate-reverse;
+  animation-play-state: var(--defaultAnimationState);
+}
+
+.heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.heart span {
+  position: relative;
+  top: 15px;
+  left: 25px;
+  z-index: 1;
+  animation: ChangeColor var(--all-animations-duration) infinite
+    alternate-reverse;
+  animation-play-state: var(--defaultAnimationState);
+  font-family: "Lovers Quarrel", cursive;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  border: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  position: absolute;
+  left: 46%;
+  top: 80%;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+@-webkit-keyframes pulse {
+  form {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes pulse {
+  form {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes ChangeBGcolor {
+  from {
+    background-color: var(--color);
+  }
+  to {
+    background-color: var(--bgColor);
+  }
+}
+
+@keyframes ChangeBGcolor {
+  from {
+    background-color: var(--color);
+  }
+  to {
+    background-color: var(--bgColor);
+  }
+}
+
+@-webkit-keyframes Change {
+  from {
+    color: var(--bgColor);
+  }
+  to {
+    color: var(--color);
+  }
+}
+
+@keyframes h1Change {
+  from {
+    color: var(--bgColor);
+  }
+  to {
+    color: var(--color);
+  }
+}
+
+@-webkit-keyframes HeartColor {
+  from {
+    background-color: var(--bgColor);
+  }
+  to {
+    background-color: var(--color);
+  }
+}
+
+@keyframes HeartColor {
+  from {
+    background-color: var(--bgColor);
+  }
+  to {
+    background-color: var(--color);
+  }
+}
+
+@-webkit-keyframes ChangeColor {
+  from {
+    color: var(--color);
+  }
+  to {
+    color: var(--bgColor);
+  }
+}
+
+@keyframes ChangeColor {
+  from {
+    color: var(--color);
+  }
+  to {
+    color: var(--bgColor);
+  }
+}

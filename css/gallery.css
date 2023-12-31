@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1d45b3 0%, #761a63 75%, #e6612c 100%);
+  padding: 20px;
+}
+.text h1,
+h3 a {
+  text-align: center;
+  color: #ffffff;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 280px;
+  height: 350px;
+  margin: 30px;
+}
+
+.container .card:nth-of-type(2) {
+  transform: rotate(5deg);
+}
+.container .card:nth-of-type(4) {
+  transform: rotate(5deg);
+}
+.container .card:nth-of-type(6) {
+  transform: rotate(5deg);
+}
+.container .card .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transform: translate(10px, 10px);
+}
+
+.container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 255px;
+  height: 325px;
+  border: 25px solid #ffffff6f;
+  z-index: 1;
+  background: linear-gradient(145deg, #991515, #e6e6e6);
+  box-shadow: 7px 7px 21px #4b494971, -7px -7px 21px #00000062;
+  background: transparent;
+}
+
+.container .card:nth-of-type(1)::before {
+  filter: url(#wavy1);
+}
+
+.container .card:nth-of-type(2)::before {
+  filter: url(#wavy2);
+}
+
+.container .card:nth-of-type(3)::before {
+  filter: url(#wavy3);
+}
+.container .card:nth-of-type(4)::before {
+  filter: url(#wavy1);
+}
+
+.container .card:nth-of-type(5)::before {
+  filter: url(#wavy1);
+}
+.container .card:nth-of-type(6)::before {
+  filter: url(#wavy3);
+}
+
+.container .card:nth-of-type(7)::before {
+  filter: url(#wavy1);
+}
+.container .card:nth-of-type(8)::before {
+  filter: url(#wavy3);
+}
+
+.image1 {
+  background-image: url("https://res.cloudinary.com/dswp5qfpm/image/upload/v1597476074/animal/rabbit_vq9gli.jpg");
+}
+
+.image2 {
+  background-image: url("https://res.cloudinary.com/dswp5qfpm/image/upload/v1597476033/animal/cat_hfwcwm.jpg");
+}
+
+.image3 {
+  background-image: url("https://res.cloudinary.com/dswp5qfpm/image/upload/v1597476068/animal/parrot_rjd1vq.jpg");
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+span {
+  color: rgb(173, 249, 229);
+  font-weight: 700;
+}
+.container .card .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 30px 30px 30px;
+  transform: translate(10px, 10px);
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  line-height: 1.4;
+  font-size: 20px;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.container .card:hover .info {
+  opacity: 1;
+}
+img {
+  width: 100%;
+  box-shadow: 0 0 13px 20px solid black;
+}
